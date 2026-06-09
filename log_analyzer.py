@@ -25,8 +25,9 @@ import matplotlib.dates as mdates
 # ─────────────────────────────────────────────
 # CONFIG
 # ─────────────────────────────────────────────
-DB_PATH    = "security_logs.db"
-OUTPUT_DIR = "output"
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH     = os.path.join(_SCRIPT_DIR, "security_logs.db")
+OUTPUT_DIR  = os.path.join(_SCRIPT_DIR, "output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 KNOWN_USERS      = ["jsmith", "adavis", "mbrown", "lwhite", "rjones", "klee", "admin"]
@@ -245,19 +246,18 @@ def generate_visualizations(df: pd.DataFrame, results: dict) -> None:
 # STEP 5 — GENERATE TEXT REPORT
 # ─────────────────────────────────────────────
 def generate_report(df: pd.DataFrame, results: dict) -> None:
-    """Write a plain-language security incident report."""
     flagged   = df["is_flagged"].sum()
     total     = len(df)
     flag_rate = flagged / total * 100
 
     report_lines = [
         "=" * 60,
-        "  CYBERSECURITY LOG ANALYSIS — INCIDENT SUMMARY REPORT",
+        "  CYBERSECURITY LOG ANALYSIS -- INCIDENT SUMMARY REPORT",
         "=" * 60,
         f"  Generated : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
         f"  Total Logs: {total:,}   |   Flagged Events: {flagged:,} ({flag_rate:.1f}%)",
         "",
-        "-- BRUTE FORCE ATTEMPTS --------------------------------------------------",
+        "-- BRUTE FORCE ATTEMPTS --------------------------------------",
     ]
     if not results["brute_force"].empty:
         for _, row in results["brute_force"].iterrows():
@@ -270,7 +270,7 @@ def generate_report(df: pd.DataFrame, results: dict) -> None:
 
     report_lines += [
         "",
-        "-- PORT SCAN ACTIVITY --------------------------------------------------",
+        "-- PORT SCAN ACTIVITY ----------------------------------------",
     ]
     if not results["port_scans"].empty:
         for _, row in results["port_scans"].iterrows():
@@ -283,7 +283,7 @@ def generate_report(df: pd.DataFrame, results: dict) -> None:
 
     report_lines += [
         "",
-        "-- TOP DATA TRANSFERS (potential exfiltration) --------------------------------------------------",
+        "-- TOP DATA TRANSFERS (potential exfiltration) ---------------",
     ]
     for _, row in results["data_exfil"].head(5).iterrows():
         mb = row["bytes_transferred"] / 1_000_000
@@ -294,7 +294,7 @@ def generate_report(df: pd.DataFrame, results: dict) -> None:
 
     report_lines += [
         "",
-        "-- PRIVILEGE ESCALATION EVENTS --------------------------------------------------",
+        "-- PRIVILEGE ESCALATION EVENTS -------------------------------",
     ]
     if not results["priv_esc"].empty:
         report_lines.append(
@@ -309,7 +309,7 @@ def generate_report(df: pd.DataFrame, results: dict) -> None:
 
     report_lines += [
         "",
-        "-- EVENT FREQUENCY RANKING --------------------------------------------------",
+        "-- EVENT FREQUENCY RANKING -----------------------------------",
     ]
     for _, row in results["event_summary"].iterrows():
         report_lines.append(
@@ -326,9 +326,7 @@ def generate_report(df: pd.DataFrame, results: dict) -> None:
 
     for line in report_lines:
         print(line)
-    print(f"\n[+] Report saved → {report_path}")
-
-
+    print(f"\n[+] Report saved -> {report_path}")
 # ─────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────

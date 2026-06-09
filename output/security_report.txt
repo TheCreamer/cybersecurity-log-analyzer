@@ -1,3 +1,117 @@
-line 1
-── test ──
-line 3
+============================================================
+  CYBERSECURITY LOG ANALYSIS -- INCIDENT SUMMARY REPORT
+============================================================
+  Generated : 2026-06-08 23:04:01
+  Total Logs: 2,000   |   Flagged Events: 274 (13.7%)
+
+-- BRUTE FORCE ATTEMPTS --------------------------------------
+  IP 209.126.110.1         31 failed attempts  (first: 2026-05-11)
+  IP 66.240.192.138        26 failed attempts  (first: 2026-05-09)
+  IP 45.33.32.156          25 failed attempts  (first: 2026-05-12)
+  IP 198.20.69.74          23 failed attempts  (first: 2026-05-12)
+  IP 192.168.1.46          11 failed attempts  (first: 2026-05-13)
+  IP 192.168.1.33          11 failed attempts  (first: 2026-05-11)
+  IP 192.168.1.32          11 failed attempts  (first: 2026-05-12)
+  IP 192.168.1.31          11 failed attempts  (first: 2026-05-15)
+  IP 192.168.1.29          11 failed attempts  (first: 2026-05-10)
+  IP 192.168.1.35          10 failed attempts  (first: 2026-05-17)
+  IP 192.168.1.16          10 failed attempts  (first: 2026-05-10)
+  IP 192.168.1.49          9 failed attempts  (first: 2026-05-11)
+  IP 192.168.1.25          9 failed attempts  (first: 2026-05-11)
+  IP 192.168.1.24          9 failed attempts  (first: 2026-05-13)
+  IP 192.168.1.19          9 failed attempts  (first: 2026-05-12)
+  IP 192.168.1.18          9 failed attempts  (first: 2026-05-10)
+  IP 192.168.1.14          9 failed attempts  (first: 2026-05-12)
+  IP 192.168.1.12          9 failed attempts  (first: 2026-05-10)
+  IP 192.168.1.47          8 failed attempts  (first: 2026-05-11)
+  IP 192.168.1.42          8 failed attempts  (first: 2026-05-10)
+  IP 192.168.1.40          8 failed attempts  (first: 2026-05-11)
+  IP 192.168.1.36          8 failed attempts  (first: 2026-05-11)
+  IP 192.168.1.41          7 failed attempts  (first: 2026-05-10)
+  IP 192.168.1.28          7 failed attempts  (first: 2026-05-16)
+  IP 192.168.1.23          7 failed attempts  (first: 2026-05-13)
+  IP 192.168.1.10          7 failed attempts  (first: 2026-05-15)
+  IP 192.168.1.48          6 failed attempts  (first: 2026-05-13)
+  IP 192.168.1.39          6 failed attempts  (first: 2026-05-14)
+  IP 192.168.1.38          6 failed attempts  (first: 2026-05-13)
+  IP 192.168.1.37          6 failed attempts  (first: 2026-05-10)
+  IP 192.168.1.34          6 failed attempts  (first: 2026-05-12)
+  IP 192.168.1.22          6 failed attempts  (first: 2026-05-12)
+  IP 192.168.1.20          6 failed attempts  (first: 2026-05-10)
+  IP 192.168.1.17          6 failed attempts  (first: 2026-05-23)
+  IP 192.168.1.45          5 failed attempts  (first: 2026-05-12)
+  IP 192.168.1.30          5 failed attempts  (first: 2026-05-12)
+  IP 192.168.1.21          5 failed attempts  (first: 2026-05-10)
+  IP 192.168.1.15          5 failed attempts  (first: 2026-05-11)
+  IP 192.168.1.13          5 failed attempts  (first: 2026-05-10)
+
+-- PORT SCAN ACTIVITY ----------------------------------------
+  IP 66.240.192.138        hit 5 unique ports  [31337,12345,9999,4444,6667]
+  IP 45.33.32.156          hit 5 unique ports  [4444,9999,12345,6667,31337]
+  IP 209.126.110.1         hit 5 unique ports  [12345,31337,4444,9999,6667]
+  IP 198.20.69.74          hit 5 unique ports  [4444,31337,9999,12345,6667]
+  IP 192.168.1.44          hit 5 unique ports  [443,80,3389,22,8080]
+  IP 192.168.1.42          hit 5 unique ports  [8080,22,443,3389,80]
+  IP 192.168.1.38          hit 5 unique ports  [8080,443,80,3389,22]
+  IP 192.168.1.36          hit 5 unique ports  [22,443,8080,3389,80]
+  IP 192.168.1.27          hit 5 unique ports  [22,80,8080,443,3389]
+  IP 192.168.1.25          hit 5 unique ports  [3389,22,80,443,8080]
+  IP 192.168.1.24          hit 5 unique ports  [3389,22,80,8080,443]
+  IP 192.168.1.19          hit 5 unique ports  [80,8080,3389,22,443]
+  IP 192.168.1.49          hit 4 unique ports  [80,3389,22,8080]
+  IP 192.168.1.47          hit 4 unique ports  [3389,80,443,22]
+  IP 192.168.1.46          hit 4 unique ports  [22,3389,80,8080]
+  IP 192.168.1.45          hit 4 unique ports  [443,22,80,3389]
+  IP 192.168.1.41          hit 4 unique ports  [22,443,80,8080]
+  IP 192.168.1.40          hit 4 unique ports  [80,443,22,3389]
+  IP 192.168.1.39          hit 4 unique ports  [3389,8080,22,80]
+  IP 192.168.1.37          hit 4 unique ports  [80,443,8080,3389]
+  IP 192.168.1.34          hit 4 unique ports  [22,3389,443,8080]
+  IP 192.168.1.33          hit 4 unique ports  [22,443,80,3389]
+  IP 192.168.1.32          hit 4 unique ports  [80,22,8080,443]
+  IP 192.168.1.31          hit 4 unique ports  [80,443,8080,3389]
+  IP 192.168.1.29          hit 4 unique ports  [22,80,3389,8080]
+  IP 192.168.1.28          hit 4 unique ports  [3389,80,443,22]
+  IP 192.168.1.23          hit 4 unique ports  [22,3389,8080,80]
+  IP 192.168.1.17          hit 4 unique ports  [3389,8080,443,80]
+  IP 192.168.1.16          hit 4 unique ports  [22,80,3389,8080]
+  IP 192.168.1.14          hit 4 unique ports  [3389,443,80,22]
+  IP 192.168.1.11          hit 4 unique ports  [3389,8080,22,80]
+  IP 192.168.1.48          hit 3 unique ports  [443,80,3389]
+  IP 192.168.1.35          hit 3 unique ports  [22,3389,80]
+  IP 192.168.1.30          hit 3 unique ports  [22,80,443]
+  IP 192.168.1.26          hit 3 unique ports  [80,443,8080]
+  IP 192.168.1.22          hit 3 unique ports  [443,3389,80]
+  IP 192.168.1.21          hit 3 unique ports  [3389,8080,443]
+  IP 192.168.1.20          hit 3 unique ports  [3389,22,8080]
+  IP 192.168.1.15          hit 3 unique ports  [8080,443,3389]
+  IP 192.168.1.13          hit 3 unique ports  [80,8080,3389]
+  IP 192.168.1.12          hit 3 unique ports  [8080,443,3389]
+  IP 192.168.1.10          hit 3 unique ports  [8080,3389,80]
+  IP 192.168.1.43          hit 2 unique ports  [3389,22]
+  IP 192.168.1.18          hit 2 unique ports  [3389,22]
+
+-- TOP DATA TRANSFERS (potential exfiltration) ---------------
+  192.168.1.16          0.05 MB  user=mbrown  status=SUCCESS
+  192.168.1.35          0.05 MB  user=klee  status=SUCCESS
+  192.168.1.37          0.05 MB  user=admin  status=BLOCKED
+  192.168.1.30          0.05 MB  user=mbrown  status=SUCCESS
+  192.168.1.40          0.05 MB  user=rjones  status=SUCCESS
+
+-- PRIVILEGE ESCALATION EVENTS -------------------------------
+  392 privilege escalation events detected.
+  2026-06-08 22:31  IP 198.20.69.74  user=anonymous  status=SUCCESS
+  2026-06-08 20:26  IP 192.168.1.38  user=mbrown  status=SUCCESS
+  2026-06-08 18:19  IP 192.168.1.49  user=klee  status=BLOCKED
+
+-- EVENT FREQUENCY RANKING -----------------------------------
+  Rank 1  PRIVILEGE_ESCALATION         392 events  failed=0  blocked=139
+  Rank 1  LOGIN_FAILURE                392 events  failed=392  blocked=0
+  Rank 3  PORT_SCAN                    353 events  failed=0  blocked=102
+  Rank 4  FILE_ACCESS                  295 events  failed=0  blocked=107
+  Rank 5  LOGIN_SUCCESS                288 events  failed=0  blocked=96
+  Rank 6  DATA_TRANSFER                280 events  failed=0  blocked=94
+
+============================================================
+  END OF REPORT
+============================================================
